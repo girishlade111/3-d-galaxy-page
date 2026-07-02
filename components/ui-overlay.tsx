@@ -207,7 +207,7 @@ export function UIOverlay({
 
       {/* Minimap */}
       {showMinimap && (
-        <div className="absolute top-4 right-80 w-48 h-48">
+        <div className="absolute top-4 right-4 w-48 h-48 z-40">
           <Card className="bg-black/80 backdrop-blur-sm border-gray-700 h-full overflow-hidden">
             <CardContent className="p-3 h-full">
               <div className="flex items-center justify-between mb-2">
