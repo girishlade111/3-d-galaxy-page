@@ -32,7 +32,7 @@ export function UIOverlay({
   const [showKeyboardShortcuts, setShowKeyboardShortcuts] = useState(false)
   const [showMinimap, setShowMinimap] = useState(false)
 
-  const distance = cameraPosition ? cameraPosition.length() : 0
+  const distance = cameraPosition?.length?.() ?? 0
   const lightYearDistance = (distance * 1000).toFixed(0)
 
   // Minimap calculations (UI only)
@@ -41,20 +41,25 @@ export function UIOverlay({
   let markerRotation = 0
   let rangePct = 0.35
 
-  if (cameraPosition && cameraTarget) {
-    const dx = cameraTarget.x - cameraPosition.x
-    const dy = cameraTarget.y - cameraPosition.y
+  const hasCamera = Boolean(cameraPosition && cameraTarget)
+  const hasLen = Boolean(cameraPosition?.length)
+
+  if (hasCamera) {
+    const dx = cameraTarget!.x - cameraPosition!.x
+    const dy = cameraTarget!.y - cameraPosition!.y
 
     const len = Math.max(1e-6, Math.hypot(dx, dy))
     const ndx = dx / len
     const ndy = dy / len
 
-    markerX = 0.5 + ndx * 0.34
-    markerY = 0.5 + ndy * 0.34
+    markerX = Math.max(0, Math.min(1, 0.5 + ndx * 0.34))
+    markerY = Math.max(0, Math.min(1, 0.5 + ndy * 0.34))
     markerRotation = (Math.atan2(ndx, ndy) * 180) / Math.PI
 
-    const d = cameraPosition.length()
-    rangePct = Math.max(0.18, Math.min(0.56, 0.6 - d / 40))
+    if (hasLen) {
+      const d = cameraPosition!.length()
+      rangePct = Math.max(0.18, Math.min(0.56, 0.6 - d / 40))
+    }
   }
 
   return (
