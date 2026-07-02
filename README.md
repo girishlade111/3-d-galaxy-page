@@ -15,7 +15,3 @@ Any changes you make to your deployed app will be automatically pushed to this r
 Your project is live at:
 
 **[https://vercel.com/gileb64375-5584s-projects/v0-3-d-galaxy-page](https://vercel.com/gileb64375-5584s-projects/v0-3-d-galaxy-page)**
-
-## Build your app
-
-Continue building your app on:
