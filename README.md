@@ -25,5 +25,5 @@ Continue building your app on:
 ## How It Works
 
 1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
+
 
