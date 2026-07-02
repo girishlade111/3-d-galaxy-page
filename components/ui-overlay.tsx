@@ -65,7 +65,7 @@ export function UIOverlay({
   return (
     <>
       {/* Top Bar */}
-      <div className="absolute top-4 left-4 right-4 flex justify-between items-start">
+      <div className="absolute top-4 left-4 right-4 flex justify-between items-start z-10">
         {/* Info Panel */}
         <Card className="bg-black/80 backdrop-blur-sm border-gray-700 max-w-sm">
           <CardContent className="p-4">
@@ -105,7 +105,7 @@ export function UIOverlay({
       </div>
 
       {/* Bottom Controls */}
-      <div className="absolute bottom-4 left-4 flex gap-2">
+      <div className="absolute bottom-4 left-4 flex gap-2 z-10">
         <Button
           onClick={onResetView}
           variant="secondary"
@@ -148,7 +148,7 @@ export function UIOverlay({
       </div>
 
       {/* Distance Indicator */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10">
         <Card className="bg-black/80 backdrop-blur-sm border-gray-700">
           <CardContent className="p-2 px-4">
             <div className="text-center text-white text-sm">
