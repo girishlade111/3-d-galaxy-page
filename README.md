@@ -21,9 +21,3 @@ Your project is live at:
 Continue building your app on:
 
 **[https://v0.app/chat/projects/rykaWPuTo4K](https://v0.app/chat/projects/rykaWPuTo4K)**
-
-## How It Works
-
-
-
-
