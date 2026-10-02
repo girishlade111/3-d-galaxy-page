@@ -275,3 +275,9 @@ This project is private and not currently licensed for public use.
 - 3D rendering powered by [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/) and [Three.js](https://threejs.org/)
 - UI components from [shadcn/ui](https://ui.shadcn.com/)
 - Deployed on [Vercel](https://vercel.com)
+
+---
+
+## Author
+
+Built by Girish Lade — [ladestack.in](https://ladestack.in)
